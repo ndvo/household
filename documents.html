@@ -26,11 +26,11 @@
         </a>
         <div class="collapse navbar-collapse" id="navbar">
           <ul class="navbar-nav mr-auto">
-            <li class="navbar-item active">
-              <a class="nav-link" href="#">Tasks</a>
+            <li class="navbar-item ">
+              <a class="nav-link" href="/">Tasks</a>
             </li>
-            <li class="navbar-item">
-              <a class="nav-link" href="/documents.html">Documents</a>
+            <li class="navbar-item active">
+              <a class="nav-link" href="#">Documents</a>
             </li>
           </ul>
         </div>
@@ -39,31 +39,37 @@
     <main class=" container">
     <h1>Task management</h1>
 
-    <form id="new-task">
+    <form id="new-document">
       <div class="form-group row">
-        <label for="taskname" class="col-md-3 col-form-label">
-          Number of Guests
+        <label for="documentname" class="col-md-3 col-form-label">
+          Document name
         </label>
-        <label for="tasktags" class="col-md-3 col-form-label">
+        <label for="documenttags" class="col-md-3 col-form-label">
           Tags
         </label>
-        <label for="taskdue" class="col-md-3 col-form-label">
-          Due date
+        <label for="documentdescription" class="col-md-3 col-form-label">
+          Description
         </label>
         <label  class="col-md-3 col-form-label"></label>
       </div>
       <div class="form-group row">
         <div class="col-md-3">
-          <input type="text" class="form-control" id="taskname" name="taskname" placeholder="A short reminder of what to do">
+          <input type="text" class="form-control" id="documentname" name="documentname" placeholder="A title for the document">
         </div>
         <div class="col-md-3">
-          <input type="text" class="form-control" id="tasktags" name="tasktags" placeholder="Tags to help categorize your tasks.">
+          <input type="text" class="form-control" id="documenttags" name="documenttags" placeholder="Tags to help categorize your documents.">
         </div>
         <div class="col-md-3">
-          <input type="date" class="form-control" id="taskdue" name="taskdue" placeholder="Due date">
+          <input type="textarea" class="form-control" id="documentdescription" name="taskdue" placeholder="Description">
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-9">
+          <input type="file" id="file">
+          <span class="custom-file-control"></span>
         </div>
         <div class="col-md-3">
-          <input type="submit" class="btn btn-primary" id="submittask" value="New task">
+          <input type="submit" class="btn btn-primary" id="submitdocument" value="New document">
         </div>
       </div>
     </form>
@@ -172,3 +178,4 @@
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
   </body>
 </html>
+

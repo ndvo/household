@@ -1,0 +1,18 @@
+
+a#logo{
+  color: white;
+  font-weight: bold;
+}
+
+main.container{
+  padding-top: 56px
+}
+
+.taskinfo{
+  cursor: pointer;
+}
+
+form#new-document{
+  border: solid thin #dee2e6;
+  padding: 5px;
+}
