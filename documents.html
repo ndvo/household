@@ -1,6 +1,5 @@
 <html>
   <head>
-    <title>Home</title>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -10,12 +9,9 @@
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
 
-    <title>Ristorante Con Fusion</title>
+    <title>Documents - Household Management</title>
   </head>
   <body>
-    <header>
-
-    </header>
     <nav class="navbar navbar-dark navbar-expand-sm fixed-top bg-dark">
       <div class="container">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
@@ -24,23 +20,44 @@
         <a id="logo" class="navbar-brand mr-auto">
           Household
         </a>
-        <div class="collapse navbar-collapse" id="navbar">
+        <div class="collapse navbar-collapse justify-content-between" id="navbar" >
           <ul class="navbar-nav mr-auto">
             <li class="navbar-item ">
-              <a class="nav-link" href="/">Tasks</a>
+              <a class="nav-link" href="/">Tasks <span title="5 tasks need your attention this month." class="taskinfo badge badge-pill badge-danger">5</span></a>
             </li>
             <li class="navbar-item active">
-              <a class="nav-link" href="#">Documents</a>
+              <a class="nav-link" href="/documents.html">Documents</a>
+            </li>
+            <li class="navbar-item dropdown ">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">My account</a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Logout</a>
+                <a class="dropdown-item" href="settings.html">Settings</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Household Members</a>
+              </div>
             </li>
           </ul>
+          <div>
+            <span class="navbar-text">
+              <a class="btn btn-primary" id="trigger-login">
+                <span class="fa fa-sign-in"></span> Login</a>
+              </a>
+            </span>
+          </div>
         </div>
       </div>
     </nav>
     <main class=" container">
-    <h1>Task management</h1>
-
-    <form id="new-document">
-      <div class="form-group row">
+    <header>
+      <h1>Document management</h1>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </header>
+      <form id="new-document" class="card">
+      <div class="form-group row d-none d-md-block ">
         <label for="documentname" class="col-md-3 col-form-label">
           Document name
         </label>
@@ -75,107 +92,112 @@
     </form>
 
     <section class="tasks">
-    <table class="table">
-      <thead class="thead-default">
-        <tr>
-          <th>Tasks</th><th>Tags</th><th>Due</th><th>Actions</th>
-        </tr>
-      </thead>
-      <tbody >
-        <tr>
-          <td>Tax report</td>
-          <td>Taxes</td>
-          <td>April 30</td>
-          <td>
-            <div class="btn-group">
-              <button type="button" class="btn btn-sm">Done</button>
-              <button type="button" class="btn btn-sm dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="sr-only">Toggle Dropdown</span>
-              </button>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">Cancel</a>
-                <a class="dropdown-item" href="#">Edit</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Postpone</a>
+      <table class="table">
+        <thead class="thead-default">
+          <tr>
+            <th>Document</th><th>Tags</th><th>Description</th><th>Actions</th>
+          </tr>
+        </thead>
+        <tbody contenteditable="true">
+          <tr>
+            <td>Tax report</td>
+            <td>Taxes</td>
+            <td>April 30</td>
+            <td>
+              <div class="btn-group">
+                <button type="button" class="btn btn-sm">Done</button>
+                <button type="button" class="btn btn-sm dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <span class="sr-only">Toggle Dropdown</span>
+                </button>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">Cancel</a>
+                  <a class="dropdown-item" href="#">Edit</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Postpone</a>
+                </div>
               </div>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td>School meeting</td>
-          <td>Education</td>
-          <td>March 5</td>
-          <td>
-            <div class="btn-group">
-              <button type="button" class="btn btn-sm">Done</button>
-              <button type="button" class="btn btn-sm dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="sr-only">Toggle Dropdown</span>
-              </button>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">Cancel</a>
-                <a class="dropdown-item" href="#">Edit</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Postpone</a>
+            </td>
+          </tr>
+          <tr>
+            <td>School meeting</td>
+            <td>Education</td>
+            <td>March 5</td>
+            <td>
+              <div class="btn-group">
+                <button type="button" class="btn btn-sm">Done</button>
+                <button type="button" class="btn btn-sm dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <span class="sr-only">Toggle Dropdown</span>
+                </button>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">Cancel</a>
+                  <a class="dropdown-item" href="#">Edit</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Postpone</a>
+                </div>
               </div>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td>Change oil</td>
-          <td>Car</td>
-          <td>May 20</td>
-          <td>
-            <div class="btn-group">
-              <button type="button" class="btn btn-sm">Done</button>
-              <button type="button" class="btn btn-sm dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="sr-only">Toggle Dropdown</span>
-              </button>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">Cancel</a>
-                <a class="dropdown-item" href="#">Edit</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Postpone</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Change oil</td>
+            <td>Car</td>
+            <td>May 20</td>
+            <td>
+              <div class="btn-group">
+                <button type="button" class="btn btn-sm">Done</button>
+                <button type="button" class="btn btn-sm dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <span class="sr-only">Toggle Dropdown</span>
+                </button>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">Cancel</a>
+                  <a class="dropdown-item" href="#">Edit</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Postpone</a>
+                </div>
               </div>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td><span title="This task was created automatically." class="taskinfo badge badge-pill badge-info">Auto ⚙</span> Roof Maintenance</td>
-          <td>House</td>
-          <td>December 10</td>
-          <td>
-            <div class="btn-group">
-              <button type="button" class="btn btn-sm">Done</button>
-              <button type="button" class="btn btn-sm dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="sr-only">Toggle Dropdown</span>
-              </button>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">Cancel</a>
-                <a class="dropdown-item" href="#">Edit</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Postpone</a>
+            </td>
+          </tr>
+          <tr>
+            <td><span title="This task was created automatically." class="taskinfo badge badge-pill badge-info">Auto ⚙</span> Roof Maintenance</td>
+            <td>House</td>
+            <td>December 10</td>
+            <td>
+              <div class="btn-group">
+                <button type="button" class="btn btn-sm">Done</button>
+                <button type="button" class="btn btn-sm dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <span class="sr-only">Toggle Dropdown</span>
+                </button>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">Cancel</a>
+                  <a class="dropdown-item" href="#">Edit</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Postpone</a>
+                </div>
               </div>
-            </div>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-    <nav aria-label="Page navigation example">
-      <ul class="pagination justify-content-end">
-        <li class="page-item disabled">
-          <a class="page-link" href="#" tabindex="-1">Previous</a>
-        </li>
-        <li class="page-item">
-          <a class="page-link" href="#">Next</a>
-        </li>
-      </ul>
-    </nav>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-end">
+          <li class="page-item disabled">
+            <a class="page-link" href="#" tabindex="-1">Previous</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#">Next</a>
+          </li>
+        </ul>
+      </nav>
     </section>
 
     </main>
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script>
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+})
+    </script>
   </body>
 </html>
 

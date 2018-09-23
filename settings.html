@@ -1,0 +1,115 @@
+<html>
+  <head>
+    <title>Settings - Household Management</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-dark navbar-expand-sm fixed-top bg-dark">
+      <div class="container">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
+          Toggle
+        </button>
+        <a id="logo" class="navbar-brand mr-auto">
+          Household
+        </a>
+        <div class="collapse navbar-collapse justify-content-between" id="navbar" >
+          <ul class="navbar-nav mr-auto">
+            <li class="navbar-item active">
+              <a class="nav-link" href="/">Tasks <span title="5 tasks need your attention this month." class="taskinfo badge badge-pill badge-danger">5</span></a>
+              
+            </li>
+            <li class="navbar-item">
+              <a class="nav-link" href="/documents.html">Documents</a>
+            </li>
+            <li class="navbar-item dropdown ">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">My account</a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Logout</a>
+                <a class="dropdown-item" href="#">Settings</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Household Members</a>
+              </div>
+            </li>
+          </ul>
+          <div>
+            <span class="navbar-text">
+              <a class="btn btn-primary" id="trigger-login">
+                <span class="fa fa-sign-in"></span> Login</a>
+              </a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <main class=" container">
+    <header>
+      <h1>Settings</h1>
+    </header>
+    <div class="row">
+    <section class="household-members col-md-6">
+      <div class="card p-5">
+      <h4 class="card-title">Household members</h4>
+      <table class="table" class="table-editable">
+        <thead class="thead-default">
+          <tr>
+            <th></th><th>Name</th><th>Permissions</th>
+          </tr>
+        </thead>
+        <tbody >
+          <tr>
+            <td><input type="checkbox"></td>
+            <td>John</td>
+            <td>Full</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox"></td>
+            <td>Peter</td>
+            <td>Child</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox"></td>
+            <td>Kelly</td>
+            <td>Full</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+    </section>
+    <section class="cipher-password col-md-6 ">
+      <div class="card p-5">
+        <h4 class="card-title" >Cipher password</a>
+        <form id="cipher-password " class="card">
+          <div class="form-group row m-2 p-2">
+            <div class="col-12 m-1">
+              <div><input type="text" class="form-control" id="csecret"  data-toggle="tooltip" data-html="true" title="There's no problem if it contains parts of your name, if
+                it is not a very difficult password. This won't be used alone.
+                This password is you part in a secret key used to cipher your data
+                before saving it. This way no one can access it, not even us... and
+                not even you if you loose te secret." name="csecret" placeholder="A password you won't forget ― ever!"></div>
+              
+            </div>
+            <div class="col-12 m-1">
+              <div><input type="text" class="form-control" id="csecret" name="csecret" placeholder="Type it once again, please"></div>
+            </div>
+          </div>
+        </form> 
+      </div>
+    </section>
+    </div>
+
+    </main>
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script>
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+})
+    </script>
+  </body>
+</html>
